@@ -6,7 +6,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var my_index = fs.readFile('index.html');
+  var my_index = fs.readFileSync('index.html');
   response.send(my_index.toString('utf-8'));
 });
 
