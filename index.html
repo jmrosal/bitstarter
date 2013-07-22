@@ -3,100 +3,244 @@
   <head>
     <meta charset="utf-8">
     <title>My First Bitstarter</title>
-    <link type="text/css" rel="stylesheet" 
-          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href = "https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css" rel = "stylesheet">
+    <link href ="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel = "stylesheet">
     <style type="text/css">
+
+      /* Container */
+      .mybrand {
+        color: yellow;
+        font-family: Helvetica;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      /* Main body */
       body {
-        padding-top: 20px;
+        padding-top: 60px;
         padding-bottom: 40px;
       }
-      .container {
-        width: 960px;
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align:center;
       }
       p.lead {
-        padding-top: 15px;
+        padding-top:1.5%;
+        font-size: 24px;
+        line-height: 30px:
       }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
+      p {
+        font-size: 18px;
+        line-height: 24px;
       }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
+
+
+      /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2.5% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align:center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
+
+      /* footer */
+      footer {
+        color: #cccccc;
         text-align: center;
       }
-      .video {
-        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
+      footer p {
+        font-size: 14px;
       }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
+      footer a {
+        color: #ccccff;
       }
-      div.row {
-        border: 1px solid;
+
+      /* Large desk top */
+      @media (min-width:980px) {
+        body {
+          padding-top: 60px;
+       }
+        .linediv-l {
+          border-right: 1px white solid;
+        }
+        .linediv-r {
+         border-left: 1px white solid;
+        }
       }
+
+      /* Landscape phone and down */
+      @media (max-width:480px) {
+      .copy {
+        padding: 2.5% 10%;
+      }
+      linediv-l {
+        border-bottom:1px while solid;
+      }
+      linediv-r {
+        border-top:1px while solid:
+      }
+      }
+
+
     </style>
+
+   
   </head>
+
   <body>
-    <div class="container">
-      <div class="row navigation">
-        <div class="span2 logo">
-          Logo
-        </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
-      <div class="row heading">
-        <div class="span12">
-          <h1>Bitstarter Title</h1>
-        </div>
-      </div> 
-     <div class="row subheading">
-        <div class="span12">
-          <p class="lead">This is my first bitstarter project.</p>
-        </div>
-      </div>
-      <div class="row pitch">
-        <div class="span6 video">
-          Video
-        </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
-          </div>
-          <div class="order">
-            Order
-          </div>
-          <div class="social">
-            Social
-          </div>
-        </div>
-      </div>
-      <div class="row section1">
-        <div class="span12">
-          Marketing Section 1
-        </div>
-      </div>
-      <div class="row section2">
-        <div class="span12">
-          Marketing Section 2
-        </div>
-      </div>
-      <div class="row faq">
-        <div class="span12">
-          FAQ
-        </div>
-      </div>
-      <div class="row footer">
-        <div class="span12">
-          Footer
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>n
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class = "row-fluid heading">
+	<div class="span12">
+            <h2>Coffe Hub</h2>
+	</div>
+      </div><!--End of Row heading-->
+      <div class = "row-fluid subheading">
+	<div class "span12 ">
+	  <p class="lead">The Best of the Brazilian Coffe, just a click away from you</p>
+	</div>
+      </div><!--End of Row subheading-->
+      <div class="row">
+	<div class="span6 video">
+	  <img class = "img-polaroid" src = "http://placehold.it/550x290"> 
+        </div> <!--End of the first row-->
+        <div class = "span6 actions">
+	  <div row class = "row"> 
+	    <div class = "statistics">
+	     <div class = "span2 offset1">
+		<div class = "linediv-l">
+		  <h3>1000</h3> <p>backers</p>
+		</div>
+	      </div> <!--End of span4-->	
+	      <div class="span1">
+		<div class="linediv-c">
+		  <h3>$6000</h3><p>backers</p>
+		</div>
+	      </div>
+	      <div class="span1">
+		<div class="linediv-r">
+		  <h3>10</h3><p>days left</p>
+		</div>
+	      </div>
+	    </div> <!--End of Statistics-->
+	  </div> <!--End of first inner row-->
+	    <div class ="span5">
+	      <div class = "thermometer progress active">
+		<div class ="bar bar-success" style="width: 60%"></div>
+		<div class = "bar bar-warning" style="width: 40%"></div>
+	      </div>
+	    </div>
+	    <div class="span6 order">
+              <button class ="btn btn-success btn-larger">Preorder</botton>
+            </div>
+            <div class="span6 social">
+	      <button class ="btn btn-twitter"><i class ="ion-twitter"></i> | Twitter </button>
+	      <button class ="btn btn-facebook"><i class ="icon-facebook"></i> | Facebook </button>
+	    </div>
+	 </div>
+      </div> <!--End of Row 1-->
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+            <h3>What We Do</h3>
+            <p>We strive to bring together those who make their livehood breending  coffe with labor and love and those who share our 
+	    passion for the drink. In the world of coffe, geography should come as bless and our mission is to overcome 
+	    all barries so that producers and coffe lovers can get the most of out it.</p>
+	    <p><a class="btn" href="#">More info &raquo;</a></p>
+	  </div>
+	  <div class="span4">
+            <h3>How We Do It</h3>
+            <p>We build a network of small and medium size producers across the brazilian territory, whose commitment to their business
+	      has often been challenged by their geographical disposition and size of their markets. By focusing on marketing their products and handling their trade clearings, we expand their markets allowing them to focus on what they do best. </p>
+            <p><a class="btn" href="#">More info &raquo;</a></p>
+          </div>
+	    <div class="span4">
+            <h3>Our Pledge</h3>
+            <p>Help us to expand our network of contacts and to speed up our learning curve. In exchange, we offer you a taste of the surprising 
+	    flavors of the gourmet types our  existing partners can offer. Our pledge comes in three types, which
+	      should provide a large enough range of tastes we are commited to bring to your coffe table. Further details here: </p>
+            <p><a class="btn" href="#">More info &raquo;</a></p>
+          </div>
+	</div>
+      </div>
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
   </body>
 </html>
